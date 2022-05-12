@@ -9,7 +9,7 @@ public class students {
     private int year_experience;
     private String course;
 
-    public students(Long id, String name, String surname, String father_name, int year_experience, String course) {
+    public students(Long id, String name, String surname, String father_name, String lang_prog, int year_experience, String course) {
         this.id = id;
         this.name = name;
         this.surname = surname;

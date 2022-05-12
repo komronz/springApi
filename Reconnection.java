@@ -18,19 +18,28 @@ public class Reconnection {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
     }
-
+    List<Object> list = new ArrayList<>();
     @GetMapping("/students/all")
     public ResponseEntity getAll(){
-        List<Object> list = new ArrayList<>();
         list.add(
-                new students(1L,
+                new students(
+                        1L,
                         "testname",
                         "testsurname",
-                        "testfather_name1",
+                        "testfathernaem",
+                        "JavaCore",
                         1,
-                        "Java Back-end")
+                        "Security of services"
+                )
         );
 
         return ResponseEntity.ok(list);
+    }
+    @GetMapping("/students/java_course")
+    public ResponseEntity getJavaCoursePeople(){
+        List<Object> list_onlyJavaCourse = new ArrayList<>();
+
+        list_onlyJavaCourse.add("");
+        return null;
     }
 }
