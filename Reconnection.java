@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,6 +32,17 @@ public class Reconnection {
                         1,
                         "Security of services"
                 )
+        );
+        list.add(
+          new students(
+                  2L,
+                  "testname2",
+                  "testsurname2",
+                  "testfath3ername2",
+                  "testname2",
+                  2,
+                  "Java Development"
+          )
         );
 
         return ResponseEntity.ok(list);
